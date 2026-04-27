@@ -5,10 +5,7 @@ import lombok.*;
 
 @Entity
 @Table(name = "lottery_results_final")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@Data
 public class LotteryResult {
 
     @Id
@@ -24,9 +21,6 @@ public class LotteryResult {
     @Column(name = "numbers", columnDefinition = "TEXT")
     private String numbers;
 
-    public LotteryResult(String lotteryName, String drawDetails, String numbers) {
-        this.lotteryName = lotteryName;
-        this.drawDetails = drawDetails;
-        this.numbers = numbers;
-    }
+
+
 }
