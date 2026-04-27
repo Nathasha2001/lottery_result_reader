@@ -35,7 +35,7 @@ public class LotteryResultService {
 
             String lotteryName = "Jayoda";
             String drawDetails = "Jayoda Lottery - Draw Date: " + LocalDate.now();
-            String numbers = extractJayodaNumbers(pageText);
+            String numbers = extractNumbers(pageText);
 
             return new LotteryResultDto(lotteryName, drawDetails, numbers);
 
@@ -51,7 +51,7 @@ public class LotteryResultService {
         }
     }
 
-    private String extractJayodaNumbers(String pageText) {
+    private String extractNumbers(String pageText) {
 
         int index = pageText.toLowerCase().indexOf("jayoda");
 
